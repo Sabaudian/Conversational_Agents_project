@@ -6,7 +6,7 @@
 
 This work explores the integration of personality into conversational agents by fine-tuning **DialoGPT-small** on two contrasting datasets: the **Cornell Movie-Dialogs Corpus** and character-specific dialogue from the **Friends** TV show. The goal is to compare generic versus persona-specific behavior in dialogue generation. Using **Hugging Face’s Transformers** and **PyTorch**, a full training pipeline was implemented. Evaluation includes Loss, Perplexity, BLEU, ROUGE-L, and emotion alignment via a DistilRoBERTa-based classifier grounded in Ekman’s six basic emotions.
 
-## Link to Colab Notebooks
+## Link to Google Colab
 - load_and_process_movie_corpus.ipynb: [![Google Colab Badge](https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&logoColor=fff&style=flat-square)](https://colab.research.google.com/github/Sabaudian/Neural_Conversational_Agents_project/blob/main/load_and_process_movie_corpus.ipynb)
 - load_and_process_friends_dataset.ipynb: [![Google Colab Badge](https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&logoColor=fff&style=flat-square)](https://colab.research.google.com/github/Sabaudian/Neural_Conversational_Agents_project/blob/main/load_and_process_friends_dataset.ipynb)
 - build_chatbot.ipynb: [![Google Colab Badge](https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&logoColor=fff&style=flat-square)](https://drive.google.com/file/d/1J9UOfUoUKnvHuQhG09LO1p5ACFQ8b2b4/view?usp=sharing)
