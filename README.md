@@ -12,3 +12,14 @@ This work explores the integration of personality into conversational agents by 
 - build_chatbot.ipynb: [![Google Colab Badge](https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&logoColor=fff&style=flat-square)](https://drive.google.com/file/d/1J9UOfUoUKnvHuQhG09LO1p5ACFQ8b2b4/view?usp=sharing)
 
 ## Introduction
+
+**Conversational Agents** (CAs), commonly known as chatbots, are systems designed to engage users via natural language, simulating human-like interactions. Within the fields of **Artificial Intelligence** (AI) and **Natural Language Processing** (NLP), CAs represent a particularly complex challenge due to the nuanced and context-sensitive nature of human language.
+
+The objective of this work is to explore how **personality** can be embedded into a neural chatbot’s behavior through dataset-specific fine-tuning. Personality, while abstract, can be approximated through consistent linguistic patterns, emotional tones, and thematic preferences. This study adopts a data-driven approach using the pre-trained **DialoGPT-small** model, a dialogue-specialized variant of `GPT-2`, trained on 147 million Reddit conversations. This model is known for its conversational fluency and contextual relevance, making it a robust base for persona modeling.
+
+Two distinct sources are employed for training:
+
+* The **Cornell Movie-Dialogs Corpus**, used to learn a general "cinematic character" style without targeting a specific identity.
+* The **Friends TV Show** dataset from Kaggle, from which character-specific subsets for **Joey Tribbiani** and **Phoebe Buffay** were extracted to construct more explicitly defined personas.
+
+The fine-tuning pipeline is implemented using Hugging Face’s `Transformers` library and PyTorch, with data preprocessing routines to clean, segment, and contextualize dialogue for training. Models are optimized over five epochs using causal language modeling objectives and evaluated using standard metrics: **Loss**, **Perplexity**, **BLEU**, **ROUGE-L**, and **BERTScore**. In addition, emotional alignment is evaluated using a DistilRoBERTa-based classifier grounded in Ekman’s six basic emotions.
